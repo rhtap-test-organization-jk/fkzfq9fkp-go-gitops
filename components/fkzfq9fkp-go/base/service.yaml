@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: fkzfq9fkp-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: fkzfq9fkp-go 
+  name: fkzfq9fkp-go
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: fkzfq9fkp-go 

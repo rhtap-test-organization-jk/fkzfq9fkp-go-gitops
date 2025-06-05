@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: fkzfq9fkp-go-gitops
+  description: This is GitOps manifest for fkzfq9fkp-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=fkzfq9fkp-go
+    backstage.io/kubernetes-id: fkzfq9fkp-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: fkzfq9fkp-go-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:fkzfq9fkp-go
